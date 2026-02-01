@@ -515,10 +515,10 @@
             const hourlyRate = parseFloat(document.getElementById('hourlyRate').value) || 50;
 
             const weeklyHours = task1 + task2 + task3 + task4 + task5 + task6;
-            const yearlyHours = weeklyHours * 52;
+            const yearlyHours = weeklyHours * 48;
             const weeklyLoss = weeklyHours * hourlyRate;
-            const monthlyLoss = (weeklyHours * 52 * hourlyRate) / 12;
-            const yearlyLoss = weeklyHours * 52 * hourlyRate;
+            const monthlyLoss = weeklyHours * 4 * hourlyRate;
+            const yearlyLoss = weeklyHours * 48 * hourlyRate;
             const weeksEquivalent = Math.round(yearlyHours / 35);
 
             document.getElementById('weeklyHours').textContent = weeklyHours + 'h';
